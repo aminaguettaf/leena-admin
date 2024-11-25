@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import './App.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import {useContext} from 'react';
+import {AdminContext} from './Context/Context';
+import Navbar from './Components/navbar/Navbar';
+import Login from './pages/Login/Login';
+import Sidebar from './Components/sidebar/Sidebar';
+import Add from './pages/Add/Add';
+import ProductList from './pages/ProductList/ProductList';
+import Orders from './pages/Orders/Orders';
+import OrderDetails from './pages/OrderDetails/OrderDetails';
 
 function App() {
+  const{atoken} = useContext(AdminContext);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ToastContainer />
+      {!atoken ? 
+      <Login />:
+      <BrowserRouter>
+        <Navbar />
+        <div className='d-flex'>
+          <Sidebar />
+          <Routes>
+            <Route path='/add-product'  element={<Add state='add'/>}/>
+            <Route path='/update-product/:id'  element={<Add state='upadate' />}/>
+            <Route path='/products-list'  element={<ProductList  />}/>
+            <Route path='/all-orders'  element={<Orders />}/>
+            <Route path='/order-details/:id' element={<OrderDetails/>}/>
+          </Routes>
+        </div>
+      </BrowserRouter>
+      }
     </div>
   );
 }

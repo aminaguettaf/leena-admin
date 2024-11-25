@@ -1,0 +1,41 @@
+.login{
+    border-radius: 10px;
+    box-shadow: 0 0 10px #eee;
+    width: 400px;
+    margin: 100px auto;
+    border: 1px solid #eee;
+    padding: 30px 20px;
+    background-color: #fff;
+}
+.login p{
+    font-size: 14px;
+    color: var(--first-grey-color);;
+}
+.login .title{
+    font-size: 24px;
+    color: var(--first-grey-color);
+}
+.login .title span{
+    color: var(--main-color);
+}
+.login input, .login button{
+    border-radius: 5px;
+    outline: none;
+}
+.login input{
+    border: 1px solid #eee;
+}
+.login button{
+    color: #fff;
+    background-color: var(--main-color);
+    border: none;
+}
+.login .qst{
+    font-weight: 600;
+}
+.login .qst span{
+    color: var(--main-color);
+    cursor: pointer;
+    text-decoration: underline;
+}
+

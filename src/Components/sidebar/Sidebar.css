@@ -1,0 +1,43 @@
+.side-bar{
+    width: 30%;
+    border-right: 1px solid #eee;
+    height: 100vh;
+    padding-top: 20px;
+    background-color: #fff;
+}
+.side-bar li.active{
+    background-color: var(--bg-color);
+    border-right: 4px solid var(--main-color);
+}
+.side-bar li a{
+    color: var(--first-grey-color);
+    font-size: 16px;
+}
+.side-bar li a i{
+    font-size: 24px;
+}
+@media (max-width:996px) {
+    .side-bar li a{
+        font-size: 14px;
+    }
+    .side-bar li a i{
+        font-size: 20px;
+    }
+}
+@media (max-width:776px) {
+    .side-bar{
+        width: 10%;
+    }
+    .side-bar li a span{
+        display: none;
+    }
+}
+@media (max-width:550px) {
+    .side-bar li a{
+        padding-left: 10px !important;
+        padding-right: 5px !important;
+    }
+    .side-bar li a i{
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,29 @@
+.nav-bar{
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+}
+.nav-bar .logo img{
+    width: 180px;
+}
+.nav-bar .logo p{
+    font-size: 12px;
+    border-radius: 50px;
+    color: var(--second-grey-color);
+    border: 1px solid #eee;
+}
+.nav-bar button{
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    width: 100px;
+    padding: 5px;
+    background-color: black;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+@media (max-width:350px) {
+    .nav-bar img{
+        width: 120px;
+    }
+}
