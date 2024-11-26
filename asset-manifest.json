@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/leena-admin/static/css/main.777025ce.css",
-    "main.js": "/leena-admin/static/js/main.9e343839.js",
+    "main.js": "/leena-admin/static/js/main.d8612481.js",
     "static/media/logo.png": "/leena-admin/static/media/logo.d1d034fea155b7e5c0a4.png",
     "index.html": "/leena-admin/index.html",
     "main.777025ce.css.map": "/leena-admin/static/css/main.777025ce.css.map",
-    "main.9e343839.js.map": "/leena-admin/static/js/main.9e343839.js.map"
+    "main.d8612481.js.map": "/leena-admin/static/js/main.d8612481.js.map"
   },
   "entrypoints": [
     "static/css/main.777025ce.css",
-    "static/js/main.9e343839.js"
+    "static/js/main.d8612481.js"
   ]
 }
