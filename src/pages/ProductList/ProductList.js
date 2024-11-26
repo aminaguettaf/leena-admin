@@ -12,7 +12,7 @@ const ProductList = () => {
 
     const getAllProducts = async()=>{
         try {
-            const response = await axios.get('http://localhost:4000/api/product/get-products');
+            const response = await axios.get('https://leena-backend-5.onrender.com/api/product/get-products');
             if(response.data.success){
             setProductList(response.data.data);
             console.log(response.data.data)}
@@ -26,7 +26,7 @@ const ProductList = () => {
     }
     const removeProduct = async(id)=>{
         try {
-            const response = await axios.post('http://localhost:4000/api/product/delete-product', {productId:id});
+            const response = await axios.post('https://leena-backend-5.onrender.com/api/product/delete-product', {productId:id});
             if(response.data.success){
                 toast.success(response.data.message);
                 getAllProducts();
@@ -57,7 +57,7 @@ const ProductList = () => {
         return(
         <div key={index} className='table body px-4 py-2 mb-3'>
             <div className='d-flex align-items-center gap-3'>
-                <img src={`http://localhost:4000/images/${product.image[0]}`} alt=''/>
+                <img src={`https://leena-backend-5.onrender.com/images/${product.image[0]}`} alt=''/>
                 <p className='name'>{product.name}</p>
             </div>
             <div className='sizes d-flex gap-2'>

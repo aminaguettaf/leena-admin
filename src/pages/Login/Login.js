@@ -13,7 +13,7 @@ const Login = () => {
   const onSubmitHandler = async(e)=>{
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:4000/api/admin/login', {email, password});
+      const response = await axios.post('https://leena-backend-5.onrender.com/api/admin/login', {email, password});
       if(response.data.success){
         setatoken(response.data.atoken);
         localStorage.setItem('atoken', response.data.atoken);

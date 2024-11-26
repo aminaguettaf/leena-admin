@@ -19,7 +19,7 @@ function App() {
       <ToastContainer />
       {!atoken ? 
       <Login />:
-      <BrowserRouter>
+      <BrowserRouter basename='/leena-admin'>
         <Navbar />
         <div className='d-flex'>
           <Sidebar />

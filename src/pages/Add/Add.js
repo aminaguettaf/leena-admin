@@ -83,7 +83,7 @@ const Add = ({state}) => {
             image4 && formData.append('image4', image4);
 
             if(state === 'add'){
-                const response = await axios.post('http://localhost:4000/api/product/add-product', formData);
+                const response = await axios.post('https://leena-backend-5.onrender.com/api/product/add-product', formData);
                 if(response.data.success){
                     toast.success(response.data.message);
                     setImage1(false);
@@ -104,7 +104,7 @@ const Add = ({state}) => {
                 }
             }
             else{
-                const response = await axios.post('http://localhost:4000/api/product/update-product', formData);
+                const response = await axios.post('https://leena-backend-5.onrender.com/api/product/update-product', formData);
                 if(response.data.success){
                     toast.success(response.data.message);
                     navigate('/products-list');

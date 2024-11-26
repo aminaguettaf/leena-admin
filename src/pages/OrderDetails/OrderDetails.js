@@ -17,7 +17,7 @@ const OrderDetails = () => {
                         {order.items.map((item, index)=>{
                             return(
                                 <div key={index} className='order d-flex align-items-center gap-2 mb-3'>
-                                    <img src={`http://localhost:4000/images/${item.image[0]}`} alt=''/>
+                                    <img src={`https://leena-backend-5.onrender.com/images/${item.image[0]}`} alt=''/>
                                     <div className=''>
                                         <p className='mb-3'>{item.name} x {item.quantity} <span className='fw-bold'>{item.size} {item.color}</span></p>
                                         <p>{item.price} DA</p>

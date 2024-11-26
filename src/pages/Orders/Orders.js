@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect} from 'react';
 import './Orders.css';
 import axios from 'axios';
 import {toast} from 'react-toastify';
@@ -13,7 +13,7 @@ const Orders = () => {
 
   const getOrders = async()=>{
     try {
-      const response = await axios.post('http://localhost:4000/api/order/all-orders', {}, {headers:{atoken}});
+      const response = await axios.post('https://leena-backend-5.onrender.com/api/order/all-orders', {}, {headers:{atoken}});
       if(response.data.success){
         setOrders(response.data.orders);
         console.log(response.data.orders)
